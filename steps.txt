@@ -1,0 +1,35 @@
+
+Ubuntu 22.04 installation (SSD 1 windows, SSD 2 Ubuntu)
+
+    - Boot-from-usb-flash-drive: https://ubuntu.com/tutorials/install-ubuntu-desktop#4-boot-from-usb-flash-drive
+    - Type-of-installation: https://www.linuxtechi.com/ubuntu-18-04-lts-desktop-installation-guide-screenshots/#Step_6_Select_the_appropriate_Installation_Type
+    - Choose “Something Else” and Click on continue. Now in order to create your own partitions, click on “New Partition Table”.
+
+
+Setup for system switch: https://superuser.com/questions/1785539/how-to-switch-os-in-dual-boot-from-remote
+For UEFI firmware:
+
+    - Linux	
+        efibootmgr	bcdedit 
+        efibootmgr --bootnext NUM	
+        efibootmgr --bootorder NUM…	
+        reboot, systemctl reboot	
+
+    - Windows
+        /enum firmware
+        bcdedit /set {fwbootmgr} bootsequence GUID
+        bcdedit /set {fwbootmgr} displayorder GUID…
+        shutdown /r /t 0
+
+Set up Tex-live in Ubuntu: https://wiki.ubuntuusers.de/TeX_Live/
+
+    - sudo apt-get install texlive-full
+    - sudo apt-get install texlive texlive-lang-german texlive-latex-extra
+
+
+Enabling Remote Desktop Connection to Linux via xRDP.
+
+    -
+
+Set up CUDA enviroment for the GPU. 
+     
